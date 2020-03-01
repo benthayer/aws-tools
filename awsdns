@@ -1,0 +1,6 @@
+AWS_HOST=$1
+AWSIP=$(awsip $1)
+
+. $HOME/.dns_env
+curl --user $DNS_USER:$DNS_PASSWORD -X PUT -d $AWSIP https://box.benthayer.com/admin/dns/custom/$AWS_HOST.aws.benthayer.com
+

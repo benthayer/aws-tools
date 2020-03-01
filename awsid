@@ -1,0 +1,11 @@
+cd ${BASH_SOURCE%/*}
+
+AWSID=$( cat aws.json | jq '.'$1 | tr -d '"' )
+
+if [[ $AWSID = null ]]
+then
+    echo 'Instance "'$1'" not found'
+    exit 1
+else
+    echo $AWSID
+fi

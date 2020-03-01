@@ -1,0 +1,3 @@
+AWSID=$(awsid $1)
+
+aws ec2 describe-instances --instance-ids $AWSID | jq '.Reservations[0].Instances[0].PublicIpAddress' | tr -d '"'

@@ -1,0 +1,19 @@
+cd ${BASH_SOURCE%/*}
+
+if [ ! -z "$1" ];
+then
+    instance=$1
+    echo $instance > $HOME/.aws_instance
+else
+    echo "No instance specified"
+    if [[ -f "$HOME/.aws_instance" ]]
+    then
+        instance=$( cat $HOME/.aws_instance )
+        echo "Using recent instance: $instance"
+    else
+        echo "No recent instances"
+        exit 1
+    fi
+fi
+
+ssh -i "Shared.pem" ec2-user@$( awsip $instance )

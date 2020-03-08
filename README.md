@@ -8,7 +8,7 @@ Right now, the main functionality is to start and stop aws instances quickly via
 ## How to use
 To use this, it is assumed that you have already set up the AWS CLI.
 
-One file of interest is `aws.json`, which is to be put in the same directory as the rest of these tools. 
+One file of interest is `instances.json`, which is to be put in the same directory as the rest of these tools. 
 You can of course change the commands to point to a different file locatoin.
 `aws.json` is a simple key/value dictionary where you should have `"nickname": "instance-id"`. You make the nickname and use it in the various commands
 
@@ -21,7 +21,7 @@ It will automatically look up the ip address of your instance and connect to it.
 
 `awsdns` is also an interesting command. You run it like `awsdns myt2large`.
 Right now, I have it set to modify my personal DNS server.
-I do this because once I have the DNS set, I can use VSCode to route ssh into `ec2-user@myt2large.aws.benthayer.com`.
+I do this because once I have the DNS set, I can access it via `ec2-user@myt2large.aws.benthayer.com` and use VSCode to remote edit the files without having to change the settings every time.
 To use this command, you'll need a `.dns_env` file in your home directory.
 `awsdns` has only been tested with my personal [mail-in-a-box](https://github.com/mail-in-a-box/mailinabox) server.
 If you'd like to update it, look at issue #2

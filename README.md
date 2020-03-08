@@ -6,9 +6,11 @@ Feel free to submit your own pull requests and add to it!
 Right now, the main functionality is to start and stop aws instances quickly via the command line while you're developing. I know sometimes I want a dev machine that's more powerful than my current computer, so but I only want it for a bit. These commands allow you to easily start and stop large instances. 
 
 ## Setup
+When setting up, bear in mind that when working with AWS, the region matters, and you might not see the right information if the AWS console is using a different region.
+The links provided should take you to your default region, but that may not be right.
  - Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
  - Install [jq](https://stedolan.github.io/jq/)
- - Create an EC2 instance if you don't already have one
+ - Create an [EC2 instance](https://console.aws.amazon.com/ec2/v2/home) if you don't already have one
  - Save your SSH Key as key.pem in the `aws-tools/` directory
  - Run `chmod 600 key.pem`
  - Register your [instance-id](https://console.aws.amazon.com/ec2/v2/home) in `instances.json`

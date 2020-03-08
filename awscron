@@ -1,2 +1,6 @@
 #/bin/bash
-(crontab -l ; echo "* * * * * if [[ \$(last --since -1hour root | wc -l) == 0 ]]; then shutdown; fi") | crontab -
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+(crontab -l ; echo "* * * * * if [[ \$(last --since -1hour root | wc -l) == 2 ]]; then shutdown now; fi") | crontab -

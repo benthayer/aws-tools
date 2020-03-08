@@ -1,0 +1,2 @@
+#/bin/bash
+(crontab -l ; echo "* * * * * if [[ $(last --since -1hour root | wc -l) == 0 ]]; then shutdown; fi") | crontab -

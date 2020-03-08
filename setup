@@ -1,0 +1,6 @@
+# to run, use "bash setup"
+
+cd ${BASH_SOURCE%/*}
+
+echo ". $( pwd )/dotprofile" >> $HOME/.profile
+echo "" >> $HOME/.profile

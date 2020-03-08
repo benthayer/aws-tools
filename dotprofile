@@ -1,0 +1,5 @@
+# to run, use "bash setup"
+
+here=${BASH_SOURCE%/*}
+export PATH=$here:$PATH
+

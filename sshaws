@@ -16,4 +16,4 @@ else
     fi
 fi
 
-ssh -i "Shared.pem" ec2-user@$( awsip $instance )
+ssh -i "key.pem" ec2-user@$( awsip $instance )

@@ -1,6 +1,6 @@
 cd ${BASH_SOURCE%/*}
 
-AWSID=$( cat instances.json | jq '.'$1 | tr -d '"' )
+AWSID=$( cat instances.json | jq '.'$1'.id' | tr -d '"' )
 
 if [[ $AWSID = null ]]
 then

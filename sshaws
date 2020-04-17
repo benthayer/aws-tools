@@ -16,4 +16,5 @@ else
     fi
 fi
 
-ssh -i "key.pem" ec2-user@$( awsip $instance )
+
+ssh -i "$AWS_KEY_PATH/$( awskey $instance )" $( awsuser $instance )@$( awsip $instance )

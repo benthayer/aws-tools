@@ -2,4 +2,5 @@
 
 here=${BASH_SOURCE%/*}
 export PATH=$here:$PATH
+export AWS_KEY_PATH=$HOME/awskeys
 

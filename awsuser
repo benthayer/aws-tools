@@ -1,0 +1,11 @@
+cd ${BASH_SOURCE%/*}
+
+AWS_USER=$( cat instances.json | jq '.'$1'.user' | tr -d '"' )
+
+if [[ $AWS_USER = null ]]
+then
+    echo 'Instance "'$1'" not found'
+    exit 1
+else
+    echo $AWS_USER
+fi

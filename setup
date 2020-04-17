@@ -1,6 +1,7 @@
-# to run, use "bash setup"
+#!/bin/bash
 
 cd ${BASH_SOURCE%/*}
 
 echo ". $( pwd )/dotprofile" >> $HOME/.profile
 echo "" >> $HOME/.profile
+echo "Success: Added references to .profile"

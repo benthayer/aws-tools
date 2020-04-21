@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ${BASH_SOURCE%/*}
 
 AWS_KEY_NAME=$( cat instances.json | jq '.'$1'.key' | tr -d '"' )

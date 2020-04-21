@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ${BASH_SOURCE%/*}
 
 AWS_USER=$( cat instances.json | jq '.'$1'.user' | tr -d '"' )

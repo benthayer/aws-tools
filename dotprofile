@@ -1,4 +1,4 @@
-# to run, use "bash setup"
+#!/bin/bash
 
 here=${BASH_SOURCE%/*}
 export PATH=$here:$PATH

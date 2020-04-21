@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ${BASH_SOURCE%/*}
 
 AWSID=$( cat instances.json | jq '.'$1'.id' | tr -d '"' )
